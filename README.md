@@ -1,12 +1,12 @@
-# BT-TMDT-1 - *Name of your app*
+# BT-TMDT-1 - *Travel Blog*
 
-**Name of your app** là một bài tập môn TMDT. Ứng dụng cho phép người dùng gửi tin nhắn (email) cho người dùng khác.
+**Travel Blog** là một bài tập môn TMDT. Ứng dụng cho phép người dùng gửi tin nhắn (email) cho người dùng khác.
 
 Thành viên:
-* [ ] **MSSV1** Tên sinh viên 1 (tên tài khoản github)
-* [ ] **MSSV2** Tên sinh viên 2 (tên tài khoản github)
+* [x] **1312098** Phùng Văn Dũng (1312098)
+* [x] **1312311** Huỳnh Văn Lâm (1312311)
 
-URL: **URL hosting của bài tập**
+URL: **https://boiling-brook-94489.herokuapp.com/**
 
 ## Yêu cầu
 
