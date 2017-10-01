@@ -33,7 +33,9 @@
     </div>
 </div>
 
-<%= render  "comments/box_comment", comment: @article_comment, article: @article %>
+<%= if logged_in? %>
+    <%= render  "comments/box_comment", comment: @article_comment, article: @article %>
+<% end %>
 
 <%= render  "comments/list_comments", obj: @article_comments %>
 
