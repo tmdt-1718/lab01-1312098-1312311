@@ -32,3 +32,9 @@
         <%= link_to  "View all articles", articles_path, class: "btn btn-xs btn-success" %>
     </div>
 </div>
+
+<%= render  "comments/box_comment", comment: @article_comment, article: @article %>
+
+<%= render  "comments/list_comments", obj: @article_comments %>
+
+

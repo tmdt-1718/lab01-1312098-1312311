@@ -24,6 +24,8 @@ class ArticlesController < ApplicationController
     end
 
     def show
+        @article_comments = @article.comments
+        @article_comment = Comment.new
     end
 
     def edit
