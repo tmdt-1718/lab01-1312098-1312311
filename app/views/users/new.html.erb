@@ -1,4 +1,5 @@
 <%= render  "shared/errors", obj: @user %>
+<% breadcrumb :signup, @user %>
 
 <div class="omb_login">
     <h2 class="omb_authTitle">Sign up or <%= link_to  "Login", login_path  %></h2>

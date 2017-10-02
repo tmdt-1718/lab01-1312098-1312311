@@ -12,8 +12,14 @@
   <body>
     <%= render  "layouts/navigation" %>
     <div class='container'>
-      <%= render  "layouts/messages" %>
-      <%= yield %>
+      <div class="row">
+        <%= render "layouts/left_menu" %>
+        <div class="col-xs-10">
+            <%= breadcrumbs pretext: "", display_single_fragment: true, style: :bootstrap, separator: '' %>
+            <%= render  "layouts/messages" %>
+            <%= yield %>
+        </div>
+      </div>
     </div>
     <%= render  "layouts/footer" %>
   </body>
