@@ -5,9 +5,11 @@ class CommentMailer < ApplicationMailer
   #
   #   en.comment_mailer.new_comment.subject
   #
-  def new_comment
-    @greeting = "Hi"
+  def new_comment (comment)
+    @comment = comment
+    @article = @comment.article
 
-    mail to: "to@example.org"
+    mail to: @article.user.email,
+          subject: "New Comment for #{@article.title}"
   end
 end

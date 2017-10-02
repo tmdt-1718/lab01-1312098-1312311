@@ -33,7 +33,7 @@
     </div>
 </div>
 
-<%= if logged_in? %>
+<% if logged_in? %>
     <%= render  "comments/box_comment", comment: @article_comment, article: @article %>
 <% end %>
 

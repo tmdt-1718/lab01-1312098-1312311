@@ -1,5 +1,10 @@
-<h1>Comment#new_comment</h1>
-
 <p>
-  <%= @greeting %>, find me in app/views/comment_mailer/new_comment.html.erb
+  A new comment was posted for your <%= @article.title %>
+</p>
+<blockquote>
+  <em><%= @comment.comment %></em>
+</blockquote>
+<p>
+  to reply to this comment, please visit the 
+  <%= link_to "Article page", @article %>.
 </p>

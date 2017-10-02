@@ -9,6 +9,7 @@ class CommentsController < ApplicationController
         @article = Article.find_by(id: params[:comment][:article_id])
         if @comment.save
             flash[:success] = "Your comment is post"
+            CommentMailer.new_comment(@comment).deliver_now
             redirect_to article_path(@article)
         else 
             render article_path(article_id_params)
