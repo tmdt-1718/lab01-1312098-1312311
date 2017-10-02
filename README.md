@@ -34,7 +34,7 @@ Yêu cầu **không bắt buộc**:
 * [x] Có thể xem danh sách các comment của từng bài viết.  (**1312098**)
 * [x] Cho phép người dùng đã đăng nhập comment cho bài viết. (**1312098**)
 * [x] Quản lý thêm thông tin tag cho mỗi bài viết. Mỗi bài viết có thể bao gồm nhiều tag và mỗi tag có thể có nhiều bài viết. (**1312098**)
-* [ ] Cho phép người dùng đăng nhập bằng tài khoản facebook và lấy ảnh đại diện, email từ facebook. (**MSSV**)
+* [x] Cho phép người dùng đăng nhập bằng tài khoản facebook và lấy ảnh đại diện, email từ facebook. (**1312098**)
 * [ ] Cho phép người dùng tạo album và đăng ảnh mới vào album. (**MSSV**)
 * [ ] Chỉ cho phép người tạo album được phép thêm, xóa ảnh mình đã đăng vào album. (**MSSV**)
 * [x] Chỉ cho phép người tạo bài viết được phép chỉnh sửa bài viết mình đã đăng. (**1312098**)
