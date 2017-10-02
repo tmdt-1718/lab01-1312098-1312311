@@ -14,4 +14,9 @@ Rails.application.routes.draw do
 
   resources :categories, except: [:destroy]
   resources :comments
+
+  
+  get 'auth/:provider/callback', to: "sessions#create"
+
+
 end
