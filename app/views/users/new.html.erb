@@ -1,3 +1,38 @@
-<h1 align="center"> Signup for Blog</h1>
+<%= render  "shared/errors", obj: @user %>
 
-<%= render  "form" %>
+<div class="omb_login">
+    <h2 class="omb_authTitle">Sign up or <%= link_to  "Login", login_path  %></h2>
+    <%= render  "shared/social_login" %>
+    <div class="row omb_row-sm-offset-3 omb_loginOr">
+        <div class="col-xs-12 col-sm-6">
+            <hr class="omb_hrOr">
+            <span class="omb_spanOr">or</span>
+        </div>
+    </div>
+    
+    <div class="row omb_row-sm-offset-3">
+        <div class="col-xs-12 col-sm-6">
+            <%= form_for(@user, :html => {class: "omb_loginForm", role: "form"}) do |f| %>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <%= f.text_field :username, class: "form-control", placeholder: "Enter username", autofocus: true %>
+                </div>
+                <span class="help-block"></span>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                    <%= f.email_field :email, class: "form-control", placeholder: "Enter email" %>
+                </div>
+                <span class="help-block"></span>                
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                    <%= f.password_field :password, class: "form-control",placeholder: "Enter password", autocomplete: "off" %>                
+                </div>
+                <span class="help-block"></span>
+                
+                <%= f.submit "Sign up", class: 'btn btn-lg btn-primary btn-block' %>        
+                </div>
+            <% end %>
+            
+        </div>
+    </div>
+</div>
