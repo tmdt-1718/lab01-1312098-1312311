@@ -31,8 +31,8 @@ Yêu cầu **bắt buộc**
 * [x] Sử dụng bcrypt hoặc devise để quản lý thông tin người dùng và băm mật khẩu. (**1312098**)
 
 Yêu cầu **không bắt buộc**:
-* [ ] Có thể xem danh sách các comment của từng bài viết.  (**MSSV**)
-* [ ] Cho phép người dùng đã đăng nhập comment cho bài viết. (**MSSV**)
+* [x] Có thể xem danh sách các comment của từng bài viết.  (**1312098**)
+* [x] Cho phép người dùng đã đăng nhập comment cho bài viết. (**1312098**)
 * [x] Quản lý thêm thông tin tag cho mỗi bài viết. Mỗi bài viết có thể bao gồm nhiều tag và mỗi tag có thể có nhiều bài viết. (**1312098**)
 * [ ] Cho phép người dùng đăng nhập bằng tài khoản facebook và lấy ảnh đại diện, email từ facebook. (**MSSV**)
 * [ ] Cho phép người dùng tạo album và đăng ảnh mới vào album. (**MSSV**)
