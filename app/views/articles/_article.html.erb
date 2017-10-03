@@ -13,6 +13,8 @@
                         <%= time_ago_in_words(article.created_at) %> ago,
                         last updated: <%= time_ago_in_words(article.updated_at) %> ago
                     </small>
+                    <br>
+                    <small>Views: <%= article.num_views %></small>
                 </div>
             </div>
             <% if article.categories.any? %>

@@ -26,6 +26,9 @@ class ArticlesController < ApplicationController
     def show
         @article_comments = @article.comments
         @article_comment = Comment.new
+        
+        @article.update(num_views: @article.num_views + 1)
+        
     end
 
     def edit
