@@ -2,6 +2,12 @@ crumb :root do
   link "Home", root_path
 end
 
+crumb :about do
+  link "About", about_path
+end
+
+
+
 crumb :articles do 
   link "Articles", articles_path
 end
