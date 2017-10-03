@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+    before_action :require_user
     def new
         @comment = Comment.new
     end
@@ -8,18 +9,20 @@ class CommentsController < ApplicationController
         @comment.user = current_user    
         @article = Article.find_by(id: params[:comment][:article_id])
         if @comment.save
-            flash[:success] = "Your comment is post"
             CommentMailer.new_comment(@comment).deliver_now
-            redirect_to article_path(@article)
+
+            respond_to do |format|
+                format.html { redirect_to article_path(@article), success: 'Comment is posted' }
+                format.js   { }
+                format.json { render :show, status: :created, location: @comment }
+            end
         else 
-            render article_path(article_id_params)
+            render @article
         end
     end
 
     private
-
         def comment_params 
             params.require(:comment).permit(:comment, :article_id)
         end
-
 end

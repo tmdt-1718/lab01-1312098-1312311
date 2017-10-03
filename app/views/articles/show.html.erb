@@ -33,11 +33,17 @@
         <%= link_to  "View all articles", articles_path, class: "btn btn-xs btn-success" %>
     </div>
 </div>
+<div class="col-xs-8 col-xs-offset-2" id="load-comments-button">
+    <button class="btn btn-primary", id="comments-link">Load Comments</button>        
+</div>
 
-<% if logged_in? %>
+<section id="comments-section">
+    <% if logged_in? %>
     <%= render  "comments/box_comment", comment: @article_comment, article: @article %>
-<% end %>
-
-<%= render  "comments/list_comments", obj: @article_comments %>
+    <% end %>
+    <div class="comments" id="comments-list">
+        <%= render  "comments/list_comments", obj: @article_comments %>            
+    </div>
+</section>
 
 
