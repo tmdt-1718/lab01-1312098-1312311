@@ -1,5 +1,5 @@
 class AlbumsController < ApplicationController
-    
+    before_action :set_album, only: [:edit, :update, :show, :destroy]
 
     def index 
         
@@ -14,7 +14,7 @@ class AlbumsController < ApplicationController
         @album.user = current_user
         if @album.save
             flash[:success] = "Article was successfully create"
-            redirect_to albums_path
+            redirect_to album_path(@album)
         else 
             render 'new'
         end
@@ -25,11 +25,15 @@ class AlbumsController < ApplicationController
     end
 
     def edit
-
     end
 
     def update
-
+        if @album.update(album_params)
+            flash[:success] = "Album was successfully update"
+            redirect_to album_path(@album)
+        else
+            render 'edit'
+        end
     end
 
     def destroy
