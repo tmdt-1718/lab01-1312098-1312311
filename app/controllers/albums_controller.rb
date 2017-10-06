@@ -1,8 +1,10 @@
 class AlbumsController < ApplicationController
     before_action :set_album, only: [:edit, :update, :show, :destroy]
-    before_action :require_user
+    before_action :require_user,  except: [:index, :show]
+    before_action :require_same_user, only: [:edit, :update, :destroy]
+
     def index 
-        
+       @albums = Album.paginate(page: params[:page], per_page: 5)
     end
     
     def new
@@ -22,7 +24,7 @@ class AlbumsController < ApplicationController
 
     def show
         @photo = Photo.new
-        @list_photos = @album.photos
+        @list_photos = @album.photos.paginate(page: params[:page], per_page: 9 )
 
     end
 
@@ -40,7 +42,9 @@ class AlbumsController < ApplicationController
     end
 
     def destroy
-
+        @album.destroy
+        flash[:danger] = "Album was successfully deleted"
+        redirect_to albums_path
     end
 
     private
@@ -49,6 +53,13 @@ class AlbumsController < ApplicationController
         end
 
         def album_params
-            params.require(:album).permit(:name, :description, :user_id)
+            params.require(:album).permit(:name, :description, :cover)
+        end
+
+        def require_same_user
+            if current_user != @album.user and !current_user.admin?
+                flash[:danger] = "You can only edit or delete your own articles"
+                redirect_to albums_path
+            end
         end
 end

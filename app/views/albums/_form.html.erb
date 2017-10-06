@@ -20,6 +20,15 @@
                 <%= f.text_area :description, rows: 2, class: "form-control", placeholder: "Description your albums" %>
             </div>
         </div>
+
+        <div class="form-group">
+            <div class="control-label col-sm-2">
+                <%= f.label "Image Cover" %>
+            </div>
+            <div class="col-sm-8 ">
+                <%= f.file_field :cover %>
+             </div>
+        </div>
    
 
         <div class="form-group">

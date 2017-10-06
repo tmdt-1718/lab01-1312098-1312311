@@ -1,6 +1,7 @@
 <div id="photo-section">
     <div class="row">
         <% if photos %>
+            <%= will_paginate photos %>
             <% photos.each do |photo| %>
             <div id="photo-list">
                 <div class="col-xs-4">            
@@ -15,6 +16,6 @@
             </div>
             <% end %>
         <% end %>
-       
+       <%= will_paginate photos %>
     </div>      
 </div>
