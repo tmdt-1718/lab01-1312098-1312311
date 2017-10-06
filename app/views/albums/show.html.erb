@@ -1,3 +1,4 @@
+<% breadcrumb :Album, @album %>
 <h1 align="center">Welcome to <%= @album.name %> album</h1>
 
 <% if logged_in? && (current_user == @album.user || current_user.admin? ) %>

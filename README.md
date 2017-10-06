@@ -13,7 +13,7 @@ URL: **https://boiling-brook-94489.herokuapp.com/**
 Sinh viên check vào các mục bên dưới và ghi mã sinh viên đã làm vào chức năng theo mẫu. Mục nào ko có MSSV là tính điểm theo nhóm. Cần sắp xếp các chức năng bên dưới theo thứ tự MSSV đã thực hiện.
 
 Yêu cầu **GIT**:
-* [ ] Sử dụng GIT theo [Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow).
+* [x] Sử dụng GIT theo [Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow).
 
 Yêu cầu **bắt buộc**
 * [x] Thiết kế trang web theo responsive với bootstrap với header (navigation bar, logo), left menu, footer và content. (**1312098**)
@@ -36,7 +36,7 @@ Yêu cầu **không bắt buộc**:
 * [x] Quản lý thêm thông tin tag cho mỗi bài viết. Mỗi bài viết có thể bao gồm nhiều tag và mỗi tag có thể có nhiều bài viết. (**1312098**)
 * [x] Cho phép người dùng đăng nhập bằng tài khoản facebook và lấy ảnh đại diện, email từ facebook. (**1312098**)
 * [x] Cho phép người dùng tạo album và đăng ảnh mới vào album. (**1312311**)
-* [] Chỉ cho phép người tạo album được phép thêm, xóa ảnh mình đã đăng vào album. (**1312311**)
+* [x] Chỉ cho phép người tạo album được phép thêm, xóa ảnh mình đã đăng vào album. (**1312311**)
 * [x] Chỉ cho phép người tạo bài viết được phép chỉnh sửa bài viết mình đã đăng. (**1312098**)
 * [ ] Cho phép người dùng layout bài viết bằng markdown. (**MSSV**)
 * [x] Gửi mail cho người dùng khi người dùng đã đăng nhập thành công. (**1312098**)

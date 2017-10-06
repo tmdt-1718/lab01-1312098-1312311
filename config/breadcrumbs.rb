@@ -6,6 +6,25 @@ crumb :about do
   link "About", about_path
 end
 
+crumb :Albums do 
+  link "Albums", albums_path
+end
+
+crumb :Album do |album|
+  link album.name, album_path(album)
+  parent :Albums
+end
+
+crumb :Album_new do |album|
+  link 'New', new_album_path
+  parent :Albums
+end
+
+crumb :Album_edit do |album|
+  link 'Edit', edit_album_path
+  parent :Albums
+end
+
 
 
 crumb :articles do 
@@ -13,7 +32,7 @@ crumb :articles do
 end
 
 crumb :article do |article|
-  link article.id, article_path(article)
+  link article.title, article_path(article)
   parent :articles
 end
 
