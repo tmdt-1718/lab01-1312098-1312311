@@ -5,6 +5,11 @@ class AlbumsController < ApplicationController
 
     def index 
        @albums = Album.paginate(page: params[:page], per_page: 5)
+       @albums.each do |album|
+            album.photos.each do |photo|
+                album.num_views += photo.num_views
+            end
+        end
     end
     
     def new
@@ -25,7 +30,9 @@ class AlbumsController < ApplicationController
     def show
         @photo = Photo.new
         @list_photos = @album.photos.paginate(page: params[:page], per_page: 9 )
-
+        @list_photos.each do |photo|
+            photo.update(num_views: photo.num_views + 1)
+        end
     end
 
     def edit
@@ -58,7 +65,7 @@ class AlbumsController < ApplicationController
 
         def require_same_user
             if current_user != @album.user and !current_user.admin?
-                flash[:danger] = "You can only edit or delete your own articles"
+                flash[:danger] = "You can only edit or delete your own albums"
                 redirect_to albums_path
             end
         end
