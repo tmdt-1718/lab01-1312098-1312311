@@ -21,10 +21,11 @@ class AlbumsController < ApplicationController
     end
 
     def show
-
+        @photo = Photo.new
     end
 
     def edit
+        
     end
 
     def update
