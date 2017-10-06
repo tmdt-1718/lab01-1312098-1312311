@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
                 format.json { render :show, status: :created, location: @comment }
             end
         else 
-            render @article
+            redirect_to article_path(@article)
         end
     end
 

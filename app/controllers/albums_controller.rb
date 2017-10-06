@@ -1,6 +1,6 @@
 class AlbumsController < ApplicationController
     before_action :set_album, only: [:edit, :update, :show, :destroy]
-
+    before_action :require_user
     def index 
         
     end
@@ -22,6 +22,8 @@ class AlbumsController < ApplicationController
 
     def show
         @photo = Photo.new
+        @list_photos = @album.photos
+
     end
 
     def edit

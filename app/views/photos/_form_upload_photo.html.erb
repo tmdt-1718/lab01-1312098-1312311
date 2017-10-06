@@ -1,8 +1,6 @@
-<%= render  "shared/errors", obj: @photo %>
-
 <div class="row">
     <div class="col-xs-12">
-        <%= form_for(@photo, :html => {class: "form-horizontal", role: "form"}, remote: true) do |f| %>
+        <%= form_for(photo, :html => {class: "form-horizontal", role: "form"}) do |f| %>
 
 
        <div class="form-group">
@@ -18,7 +16,7 @@
    
         <div class="form-group">
             <div class="col-sm-10 col-sm-offset-2">
-                <%= f.submit "Upload", class: 'btn btn-primary btn-lg' %>
+                <%= f.submit "Upload", class: 'btn btn-primary btn-small' %>
             </div>
         </div>
         <% end %>

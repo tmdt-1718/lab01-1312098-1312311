@@ -9,13 +9,11 @@ class PhotosController < ApplicationController
         @photo.num_views = 0
         @album = Album.find_by(id: params[:photo][:album_id])
         if @photo.save
-            respond_to do |format|
-                format.html { redirect_to article_path(@album), success: 'Your photo was upload' }
-                format.js   { }
-                format.json { render :show, status: :created, location: @photo }
-            end
+           flash[:success] = 'Your photo was uploaded'
+           redirect_to album_path(@album)
         else
-            render @album
+            flash[:danger] = "Need image before uploaded"
+            redirect_to album_path(@album)
         end
     end
 

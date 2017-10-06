@@ -1,5 +1,9 @@
-<h1 align="center">Album</h1>
+<h1 align="center">Welcome to <%= @album.name %> album</h1>
 
-<%= render 'photos/form_upload_photo' %>
+<% if logged_in? && (current_user == @album.user || current_user.admin? ) %>
+    <div id="upload_photos_section">
+        <%= render 'photos/form_upload_photo', photo: @photo, album: @album %>
+    </div>
+<% end %>
 
-<%= render 'photos/list_photos' %>
+<%= render 'photos/list_photos' , photos: @list_photos %>

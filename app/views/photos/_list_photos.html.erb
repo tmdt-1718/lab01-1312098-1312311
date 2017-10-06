@@ -1,17 +1,19 @@
 <div id="photo-section">
     <div class="row">
-        <% if @photo.img %>
+        <% if photos %>
+            <% photos.each do |photo| %>
             <div id="photo-list">
                 <div class="col-xs-4">            
                     <div class="thumbnail">
                         <div class="caption">
-                            <h4>Thumbnail Headline</h4>
-                            <p>short thumbnail description</p>
+                            <h4> <%= photo.album.user.username %></h4>
+                            <p>Views: <%= photo.num_views %></p>
                         </div>
-                        <%= cl_image_tag @photo.img %>
+                        <%= cl_image_tag photo.img %>
                     </div>
                 </div>
             </div>
+            <% end %>
         <% end %>
        
     </div>      
