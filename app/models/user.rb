@@ -13,6 +13,9 @@ class User < ActiveRecord::Base
                 uniqueness: { case_sensitive: false},
                 format: { with: VALID_EMAIL_REGEX }
     has_secure_password
+    
+    
+    mount_uploader :avatar, ImageUploader
 
     def self.sign_in_from_omniauth(auth)
         find_by(provider: auth['provider'], uid: auth['uid']) || create_user_from_omniauth(auth)

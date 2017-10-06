@@ -35,6 +35,8 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'bootstrap-will_paginate'
 gem "figaro"
 gem "gretel"
+gem 'carrierwave', '~> 1.0'
+gem 'cloudinary'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
