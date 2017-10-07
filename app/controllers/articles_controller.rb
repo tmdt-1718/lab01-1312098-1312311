@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
     end
 
     def show
-        @article_comments = @article.comments
+        @article_comments = @article.comments.paginate(page: params[:page], per_page: 5)
         @article_comment = Comment.new
         
         @article.update(num_views: @article.num_views + 1)

@@ -1,7 +1,9 @@
 $navbar-default-bg: #ecf0f1;
-
+$grid-float-breakpoint: 992px;
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
 
 #logo {
     float: left;

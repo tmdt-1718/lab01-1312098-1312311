@@ -20,7 +20,7 @@ class AlbumsController < ApplicationController
         @album = Album.new(album_params)
         @album.user = current_user
         if @album.save
-            flash[:success] = "Article was successfully create"
+            flash[:success] = "Albums was successfully create"
             redirect_to album_path(@album)
         else 
             render 'new'

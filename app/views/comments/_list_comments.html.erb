@@ -1,13 +1,16 @@
 <div class="row">
+    <div align="center">
+        <%= will_paginate obj %>
+    </div>
     <% obj.each do |c| %>
     <div class="col-xs-8 col-xs-offset-2">
         <div class="panel panel-white post panel-shadow">
             <div class="post-heading">
                 <div class="pull-left image">
-                    <%= gravatar_for c.user, size: 50 if !@user.avatar%>
-                    <%= cl_image_tag @user.avatar , :width => 50, :height => 50, 
+                    <%= gravatar_for c.user, size: 50 if !c.user.avatar%>
+                    <%= cl_image_tag c.user.avatar , :width => 50, :height => 50, 
                            :crop => :fill, :gravity => :face,
-                           :radius => :max  if @user.avatar %>
+                           :radius => :max  if c.user.avatar %>
                 </div>
                 <div class="pull-left meta">
                     <div class="title h5">
