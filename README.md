@@ -43,14 +43,25 @@ Yêu cầu **không bắt buộc**:
 * [x] Gửi mail cho tác giả khi có người dùng comment vào bài viết của họ. (**1312098**)
 
 Liệt kê các **yêu cầu nâng cao** đã thực hiện:
-* [ ] Chức năng 1
+* [x] Thêm admin vào hệ thống ( có quyền chỉnh sữa, xóa các bài viết, album.[username: admin@gmail.com/password: admin] )(**1312098**)
 * [ ] Chức năng 2
 
 ## Demo
 
 Link ảnh GIF demo ứng dụng:
 
-![Video Walkthrough](demo.gif)
+* Demo Login - Signup 
+![Video Walkthrough](gif-demo/login_logout_signup.gif)
+
+* Demo Albums
+![Video Walkthrough](gif-demo/albums.gif)
+
+* Demo Blogs
+![Video Walkthrough](gif-demo/Blogs.gif)
+
+* Demo Admin, Email send login and comment
+![Video Walkthrough](gif-demo/Admin.gif)
+
 
 Tạo ảnh GIF với chương trình [LiceCap](http://www.cockos.com/licecap/).
 
